@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Password Generator</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+<script>
+
+
+// function valChecked(){
+//  var chkd = userInputForm.c1.checked || 
+//             userInputForm.c2.checked ||
+//             userInputForm.c3.checked || 
+//             userInputForm.c4.checked
+
+
+
+//  if (chkd == true) {
+//      alert ("Valid!")
+//  } 
+
+
+//  else {
+//     alert ("Not Valid.")
+//  }
+
+// }
+
+
+function valChecked () {
+    alert ("All good!")
+}
+
+
+// function valChecked(){
+//  var length =   userInputForm.c1pswdLength > 7 && 
+//                 userInputForm.c1pswdLength < 129 
+
+
+
+//  if (length == true) {
+//      alert ("Valid!")
+//  } 
+
+
+//  else {
+//     alert ("Not Valid.")
+//  }
+
+// }
+
+</script>
+    
+
+
+
+
+<!-- Start of Input Form -->
+
+    <form id="userInputForm">
+        
+
+        <div class="form-group">
+
+            <label for="pswdLength">Password Length</label>
+            <input type="number" class="form-control required" name="pswdLength" min="8" max="128"> 
+            </input>
+            <small>Password must be between 8 and 128 characters!</small>
+        </div>
+
+        <!-- required="true"
+                name="pswdLength" value="pswdLength" min=8 max=128 -->
+
+
+
+<input type = "checkbox" name = "c1" value = "c1"/> C1 
+<br>
+<input type = "checkbox" name = "c2" value = "c2"/> C2
+<br>
+<input type = "checkbox" name = "c3" value = "c3"/> C3
+<br> 
+<input type = "checkbox" name = "c4" value = "c4"/> C4 
+<br>
+
+
+
+
+<input type = "button" value = "Edit and Report" onClick = "valChecked()">
+                                                            <!--  -->
+        <!-- <button onclick="makeItHappen()">Submit</button> -->
+        
+        
+        
+    </form>
+
+<!-- End of Input Form -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<form id="frm1" action="/action_page.php" method="get">
+  First name: <input type="text" name="fname" value="Donald"><br>
+  Last name: <input type="text" name="lname" value="Duck"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>Click "Try it" to display the value of the form method.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("frm1").method;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html> -->
