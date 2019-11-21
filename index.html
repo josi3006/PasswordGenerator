@@ -14,47 +14,25 @@
 <script>
 
 
-// function valChecked(){
-//  var chkd = userInputForm.c1.checked || 
-//             userInputForm.c2.checked ||
-//             userInputForm.c3.checked || 
-//             userInputForm.c4.checked
+function valChecked(){
+ var chkd = userInputForm.c1.checked || 
+            userInputForm.c2.checked ||
+            userInputForm.c3.checked || 
+            userInputForm.c4.checked
 
 
 
-//  if (chkd == true) {
-//      alert ("Valid!")
-//  } 
+ if (chkd == true) {
+     alert ("Valid!")
+ } 
 
 
-//  else {
-//     alert ("Not Valid.")
-//  }
+ else {
+    alert ("Not Valid.")
+ }
 
-// }
-
-
-function valChecked () {
-    alert ("All good!")
 }
 
-
-// function valChecked(){
-//  var length =   userInputForm.c1pswdLength > 7 && 
-//                 userInputForm.c1pswdLength < 129 
-
-
-
-//  if (length == true) {
-//      alert ("Valid!")
-//  } 
-
-
-//  else {
-//     alert ("Not Valid.")
-//  }
-
-// }
 
 </script>
     
@@ -70,33 +48,30 @@ function valChecked () {
         <div class="form-group">
 
             <label for="pswdLength">Password Length</label>
+
             <input type="number" class="form-control required" name="pswdLength" min="8" max="128"> 
-            </input>
+
             <small>Password must be between 8 and 128 characters!</small>
+        
         </div>
 
-        <!-- required="true"
-                name="pswdLength" value="pswdLength" min=8 max=128 -->
+
+        <div class="form-group">
+
+        <input type = "checkbox" name = "c1" value = "c1"/> C1 
+        <br>
+        <input type = "checkbox" name = "c2" value = "c2"/> C2
+        <br>
+        <input type = "checkbox" name = "c3" value = "c3"/> C3
+        <br> 
+        <input type = "checkbox" name = "c4" value = "c4"/> C4 
+        <br>
+
+        </div>
 
 
-
-<input type = "checkbox" name = "c1" value = "c1"/> C1 
-<br>
-<input type = "checkbox" name = "c2" value = "c2"/> C2
-<br>
-<input type = "checkbox" name = "c3" value = "c3"/> C3
-<br> 
-<input type = "checkbox" name = "c4" value = "c4"/> C4 
-<br>
-
-
-
-
-<input type = "button" value = "Edit and Report" onClick = "valChecked()">
-                                                            <!--  -->
-        <!-- <button onclick="makeItHappen()">Submit</button> -->
-        
-        
+        <input type="submit" onClick = "valChecked()">
+       
         
     </form>
 
