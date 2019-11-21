@@ -23,22 +23,23 @@ function valChecked(){
             userInputForm.numericChar.checked || 
             userInputForm.specialChar.checked
 
-
-
  if (chkd == true) {
      makeArray();
  } 
 
-
  else {
     alert ("Please check at least one character type.")
  }
-
 }
 
 
-function makeArray()
-  {
+
+// This makes an array of all available characters based on user checkboxes
+
+function makeArray() {
+
+var userArray = []
+  
       if(document.getElementById("lowerChar").checked) {
         var userArray = lowerChar.concat(userArray);
   }
@@ -54,6 +55,7 @@ function makeArray()
 
   console.log(userArray);
 
+
 }
 
 
@@ -62,33 +64,34 @@ function makeArray()
 
 // This generates the password
 
-// function genPswd() {
-//     var length = "pswdLength",
-//         charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
-//         retVal = "";
-//     for (var i = 0, n = charset.length; i < length; ++i) {
-//         retVal += charset.charAt(Math.floor(Math.random() * n));
-//     }
-//     return retVal;
-// }
+function genPswd() {
+    var length = "pswdLength",
+        charset = userArray,
+        retVal = "";
+    for (var i = 0, n = charset.length; i < length; ++i) {
+        retVal += charset.charAt(Math.floor(Math.random() * n));
+    }
+    return retVal;
+
+console.log(genPswd(retVal))
+
+}
+
+   
 
 
 
-var lowerChar = [
-  "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"
-];
 
-var upperChar = [
-  "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"
-];
 
-var numericChar = [
-  "0","1","2","3","4","5","6","7","8","9"
-];
+// This defines the types of characters available
 
-var specialChar = [
-  "!","@","$","&","?","%"
-];
+var lowerChar = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+
+var upperChar = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+
+var numericChar = ["0","1","2","3","4","5","6","7","8","9"];
+
+var specialChar = ["!","@","$","&","?","%"];
 
 
 
@@ -135,7 +138,7 @@ var specialChar = [
 
 
 
-    <!-- <div id="retVal"></div> -->
+    <!-- <div id="retVal" value="retVal"></div> -->
 
 <!-- End of Input Form -->
     
