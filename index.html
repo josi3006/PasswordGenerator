@@ -14,24 +14,82 @@
 <script>
 
 
+
+// This validates that checkboxes are checked
+
 function valChecked(){
- var chkd = userInputForm.c1.checked || 
-            userInputForm.c2.checked ||
-            userInputForm.c3.checked || 
-            userInputForm.c4.checked
+ var chkd = userInputForm.lowerChar.checked || 
+            userInputForm.upperChar.checked ||
+            userInputForm.numericChar.checked || 
+            userInputForm.specialChar.checked
 
 
 
  if (chkd == true) {
-     alert ("Valid!")
+     makeArray();
  } 
 
 
  else {
-    alert ("Not Valid.")
+    alert ("Please check at least one character type.")
  }
 
 }
+
+
+function makeArray()
+  {
+      if(document.getElementById("lowerChar").checked) {
+        var userArray = lowerChar.concat(userArray);
+  }
+      if(document.getElementById("upperChar").checked) {
+        var userArray = upperChar.concat(userArray);
+  }
+      if(document.getElementById("numericChar").checked) {
+        var userArray = numericChar.concat(userArray);
+  }
+      if(document.getElementById("specialChar").checked) {
+        var userArray = specialChar.concat(userArray);
+  }
+
+  console.log(userArray);
+
+}
+
+
+
+
+
+// This generates the password
+
+// function genPswd() {
+//     var length = "pswdLength",
+//         charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+//         retVal = "";
+//     for (var i = 0, n = charset.length; i < length; ++i) {
+//         retVal += charset.charAt(Math.floor(Math.random() * n));
+//     }
+//     return retVal;
+// }
+
+
+
+var lowerChar = [
+  "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"
+];
+
+var upperChar = [
+  "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"
+];
+
+var numericChar = [
+  "0","1","2","3","4","5","6","7","8","9"
+];
+
+var specialChar = [
+  "!","@","$","&","?","%"
+];
+
 
 
 </script>
@@ -49,7 +107,7 @@ function valChecked(){
 
             <label for="pswdLength">Password Length</label>
 
-            <input type="number" class="form-control required" name="pswdLength" min="8" max="128"> 
+            <input type="number" class="form-control required" name="pswdLength" min="8" max="128" required="true"> 
 
             <small>Password must be between 8 and 128 characters!</small>
         
@@ -58,13 +116,13 @@ function valChecked(){
 
         <div class="form-group">
 
-        <input type = "checkbox" name = "c1" value = "c1"/> C1 
+        <input type = "checkbox" name = "lowerChar" id = "lowerChar" value = "lowerChar"/> lower case 
         <br>
-        <input type = "checkbox" name = "c2" value = "c2"/> C2
+        <input type = "checkbox" name = "upperChar" id = "upperChar" value = "upperChar"/> UPPER CASE
         <br>
-        <input type = "checkbox" name = "c3" value = "c3"/> C3
+        <input type = "checkbox" name = "numericChar" id = "numericChar" value = "numericChar"/> Numbers
         <br> 
-        <input type = "checkbox" name = "c4" value = "c4"/> C4 
+        <input type = "checkbox" name = "specialChar" id = "specialChar" value = "specialChar"/> Special Characters 
         <br>
 
         </div>
@@ -74,6 +132,10 @@ function valChecked(){
        
         
     </form>
+
+
+
+    <!-- <div id="retVal"></div> -->
 
 <!-- End of Input Form -->
     
@@ -96,31 +158,3 @@ function valChecked(){
 
 
 
-
-
-
-<!-- <!DOCTYPE html>
-<html>
-<body>
-
-<form id="frm1" action="/action_page.php" method="get">
-  First name: <input type="text" name="fname" value="Donald"><br>
-  Last name: <input type="text" name="lname" value="Duck"><br><br>
-  <input type="submit" value="Submit">
-</form>
-
-<p>Click "Try it" to display the value of the form method.</p>
-
-<button onclick="myFunction()">Try it</button>
-
-<p id="demo"></p>
-
-<script>
-function myFunction() {
-  var x = document.getElementById("frm1").method;
-  document.getElementById("demo").innerHTML = x;
-}
-</script>
-
-</body>
-</html> -->
