@@ -53,18 +53,37 @@ function valChecked(){
    // This generates the password
       
    function makePasswd(userArray) {
+
+    var pswdLength = document.getElementById("pswdLength").value;
+
      var passwd = '';
-     var chars = userArray;
-     for (i=1; i < userArray.length; i++) {
-       var c = Math.floor(Math.random()*chars.length + 1);
-       passwd += chars[c]
+     for (i=0; i < pswdLength; i++) {
+     var c = Math.floor(Math.random()*userArray.length);
+       passwd += userArray[c];
      }
-    writeToPage(passwd)
-   }
-   
-   function writeToPage(passwd) {
 
         console.log(passwd)
+
+        writeToPage(passwd)
+   }
+   
+
+
+
+
+
+   function writeToPage(passwd) {
+
+    // Example to follow, follows :)
+
+// var changeP = document.querySelector("#change2");
+
+// changeP.setAttribute("style", "color:blue; border:2px solid black;");
+
+
+
+
+
        // Use DOM here to create password display element (after breaking javascript into own file)
    }
    
