@@ -1,8 +1,23 @@
 
 
+
+// This defines the types of characters available to the user
+   
+var lowerChar = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+   
+var upperChar = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+
+var numericChar = ["0","1","2","3","4","5","6","7","8","9"];
+
+var specialChar = ["!","@","$","&","?","%"];
+
+
+
+
+
 // This validates that checkboxes are checked
 
-function valChecked(){
+   function valChecked(){
     var chkd = userInputForm.lowerChar.checked || 
                userInputForm.upperChar.checked ||
                userInputForm.numericChar.checked || 
@@ -18,8 +33,10 @@ function valChecked(){
    }
    
    
+
    
-   // This makes an array of all available characters based on user checkboxes
+
+// This makes an array of the available characters based on user checkboxes
    
    function makeArray() {
    
@@ -45,12 +62,10 @@ function valChecked(){
    }
    
    
+      
+      
    
-   
-   
-   
-   
-   // This generates the password
+// This generates the password based on the user's choices
       
    function makePasswd(userArray) {
 
@@ -71,34 +86,26 @@ function valChecked(){
 
 
 
+// This writes the password Label and password Data to the page
 
    function writeToPage(passwd) {
 
-    // Example to follow, follows :)
+    var pswdLable = document.createElement('h1');
+    pswdLable.textContent = "Your Password Is:";
+    pswdLable.setAttribute("style", "text-align:center");
+    document.body.appendChild(pswdLable);
 
-// var changeP = document.querySelector("#change2");
-
-// changeP.setAttribute("style", "color:blue; border:2px solid black;");
-
-
-
-
-
-       // Use DOM here to create password display element (after breaking javascript into own file)
+    var pswdData = document.createElement('p');
+    pswdData.textContent = passwd;
+    pswdData.setAttribute("style", "text-align:center; font-size:100%;");
+    document.body.appendChild(pswdData);
    }
    
    
    
+
    
-   // This defines the types of characters available
-   
-   var lowerChar = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-   
-   var upperChar = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-   
-   var numericChar = ["0","1","2","3","4","5","6","7","8","9"];
-   
-   var specialChar = ["!","@","$","&","?","%"];
+
    
    
    
