@@ -53,12 +53,11 @@ var specialChar = ["!","@","$","&","?","%"];
      }
          if(document.getElementById("specialChar").checked) {
            var userArray = specialChar.concat(userArray);
-     }
-   
+     }   
+     
      console.log(userArray);
    
-       makePasswd(userArray)
-   
+       makePasswd(userArray)   
    }
    
    
@@ -76,9 +75,6 @@ var specialChar = ["!","@","$","&","?","%"];
      var c = Math.floor(Math.random()*userArray.length);
        passwd += userArray[c];
      }
-
-        console.log(passwd)
-
         writeToPage(passwd)
    }
    
@@ -92,20 +88,14 @@ var specialChar = ["!","@","$","&","?","%"];
 
     var pswdLable = document.createElement('h1');
     pswdLable.textContent = "Your Password Is:";
-    pswdLable.setAttribute("style", "text-align:center");
+    pswdLable.setAttribute("style", "text-align:center; color:rgb(88, 88, 88);");
     document.body.appendChild(pswdLable);
 
     var pswdData = document.createElement('p');
     pswdData.textContent = passwd;
-    pswdData.setAttribute("style", "text-align:center; font-size:100%;");
+    pswdData.setAttribute("style", "text-align:center; font-size:2vw; color:rgb(88, 88, 88);");
     document.body.appendChild(pswdData);
    }
    
-   
-   
-
-   
-
-   
-   
+  
    
