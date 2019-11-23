@@ -1,6 +1,8 @@
 # PasswordGenerator
 Homework #3, using Javascript to make a password generator
 
+Published:  https://josi3006.github.io/PasswordGenerator/
+
 
 The function of the application is to generate a random password based on criteria the user selects, specifically, the number of characters
 in the password, and the type(s) of characters (lower case letters, upper case letters, numbers and/or special characters).
