@@ -14,4 +14,6 @@ Once the criteria are selected, Javascript functions run which...
 
 See below for screenshots of the application ("before" and "after" operation):
 
+![PGBefore](https://user-images.githubusercontent.com/57072324/69472959-a1370780-0d7e-11ea-8530-34dde1368ede.png)
 
+![PGAfter](https://user-images.githubusercontent.com/57072324/69472960-a5632500-0d7e-11ea-992a-6ee30dbd368b.png)
